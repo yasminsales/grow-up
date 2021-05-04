@@ -159,6 +159,17 @@ main h1 {
     height: 300px;
 }
 
+.orcamento form input:not([type="radio"]):not([type="checkbox"]):focus,
+.orcamento form textarea:focus,
+.orcamento form input:focus { 
+    outline-color: #00796B;
+}
+
+
+.orcamento form fieldset { 
+    margin: 15px 0; 
+    border-color: #fff;
+}
 .orcamento{
     display:flex;
     justify-content: center;

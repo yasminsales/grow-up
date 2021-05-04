@@ -44,12 +44,11 @@
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required>
 
-                        <p>Telefone: 
-                            <a href="tel:1198984242">(11) 9898-4242</a>
-                            <a href="https://api.whatsapp.com/send?phone=551198984242&text=Formul%C3%A1rio%20de%20Or%C3%A7amento!!!" target="_blank">(WhatsApp)</a>
-                        </p>
-
-
+                        <label for="telefone">Telefone:</label>
+                        <input type="telefone" id="telefone" name="telefone" required>
+                        <br>
+                        <fieldset>
+                        <legend>Serviços</legend>
                         <input type="checkbox" name="assunto" id="assunto_desenvolvimentoweb" value="Desenvolvimento Web">
                         <label for="assunto_desenvolvimentoweb">Desenvolvimento Web</label>
                         <br>
@@ -58,13 +57,51 @@
                         <br>
                         <input type="checkbox" name="assunto" id="assunto_ux" value="Consultoria Ux">
                         <label for="assunto_ux">Consultoria Ux</label>
-                        <br><br>
-                        <input type="radio" name="assunto" id="assunto_urgente" value="Urgente">
-                        <label for="assunto_urgente">Urgente</label>
-                        <br><br>          
+                        </fieldset>
+                        
+                        <fieldset>
+                        <legend>Urgência na entrega</legend>
+                        <input type="radio" name="urgencia" id="urgencia_sim" value="Entrega com urgência">
+                        <label for="urgencia_sim">Sim</label>
+
+                        <input type="radio" name="urgencia" id="urgencia_nao" value="Entrega sem urgência">
+                        <label for="urgencia_nao">Não</label>
+                        </fieldset>
+                             
+                        <label for="data_entrega">Data de Entrega</label>
+                        <input type="date" name="data_entrega" id="data_entrega">
+                        <br>
                         <label for="mensagem">Descrição:</label>
                         <textarea name="messagem" id="mensagem" required></textarea>
                         <br>
+                        <label for="anexos">Anexos</label>
+                        <input type="file" name="anexos" id="anexos">
+                        <br>
+
+                        <label for="publico_alvo">Qual é o público alvo do seu projeto?</label>
+                        <input type="text" name="publico_alvo" id="publico_alvo">
+                        <br>
+
+                        <label for="forma_pagamento">Forma de pagamento</label>
+                        <select name="forma_pagamento" id="forma_pagamento" required>
+                            <option selected disabled>Selecione uma opção</option> 
+                            <option value="Débito">Débito</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Transferencia bancaria">Transferência bancária</option>
+                            <option value="Boleto">Boleto</option>
+                        </select>
+                        <br>
+                        <label for="origem_cliente">Como conheceu a Grow Up?</label>
+                        <select name="origem_cliente" id="origem_cliente">
+                            <option selected disabled>Selecione uma opção</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Google">Google</option>
+                            <option value="Amarelinho">Amarelinho</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+
                         <button type="submit">Enviar</button>
 
                     </form>  
