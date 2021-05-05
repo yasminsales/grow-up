@@ -92,6 +92,7 @@ section.banner .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -263,4 +264,43 @@ main h1 {
 
 .img-destaque {
     animation: flutuar 2s infinite;
+    width: 500px;
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    section.banner .container,
+    section.introducao-sobre .container .intro {
+        flex-wrap: wrap;
+    }
+
+    section.introducao-sobre {
+        padding: 0 40px;
+    }
+
+    section.video-sobre iframe {
+        height: 400px;
+        padding: 40px;
+    }
+
+    section.banner .container .texto {
+        text-align: center;
+    }
+
+    section.banner {
+        padding: 0 40px 40px;
+    }
+}
+
+@media (max-width: 515px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul {
+        padding: 0;
+        margin: 0;
+    }
 }
