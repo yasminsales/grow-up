@@ -304,3 +304,37 @@ main h1 {
         margin: 0;
     }
 }
+
+@media (max-width: 900px) {
+
+    section.desenvolvimento .container,
+    section.marketing .container,
+    section.consultoria-ux .container {
+        flex-wrap: wrap;
+    }
+
+    section.banner .container .texto {
+        text-align: center;
+    }
+
+    section.banner {
+        padding: 0 40px 40px;
+    }
+
+    section.banner .marketing {
+        flex-wrap: wrap;
+    }
+
+    section.banner .marketing .texto {
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    section.contato .container,
+    section.contato .info {
+        flex-wrap: wrap;
+    }
+}
