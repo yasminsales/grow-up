@@ -18,6 +18,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 header .container {
@@ -37,6 +38,19 @@ header nav ul li {
     padding: 10px;
 }
 
+header nav ul li a:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s;
+}
+
+header nav ul li:hover a:after {
+    width: 100%;
+}
+
 header nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -51,12 +65,14 @@ header nav ul li a {
     display: inline-block;
     text-decoration: none;
     transition: all 0.5s;
+    box-shadow: 0px 5px 6px rgb(0 0 0 / 30%);
+    cursor: pointer;
 }
 
-.btn-primary:hover { 
-    background-color: #f5d235;
-    color: #000;
+.btn-primary:hover {
+    background-color: #61b6ac;
 }
+
 .container {
     width: 1200px;
     max-width: 100%;
@@ -180,48 +196,71 @@ main h1 {
 
 .orcamento form input:not([type="radio"]):not([type="checkbox"]):focus,
 .orcamento form textarea:focus,
-.orcamento form input:focus { 
+.orcamento form input:focus {
     outline-color: #00796B;
 }
 
-.orcamento form fieldset { 
-    margin: 15px 0; 
+.orcamento form fieldset {
+    margin: 15px 0;
     border-color: #fff;
 }
-.orcamento{
-    display:flex;
+
+.orcamento {
+    display: flex;
     justify-content: center;
 
-  }
-
-  .orcamento a:link {
-    color:#00796b;
-    text-decoration:none;
-  }
-  .orcamento a:visited {
-    color:#9B9B9B;
-    text-decoration:none;
-  }
-  .orcamento a:hover {
-    color:#000000;
-    text-decoration:underline;
 }
 
-.orcamento form button{
+.orcamento a:link {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.orcamento a:visited {
+    color: #9B9B9B;
+    text-decoration: none;
+}
+
+.orcamento a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.orcamento form button {
     border: none;
     background-color: #00796b;
     color: white;
     text-transform: uppercase;
-    padding:10x;
+    padding: 10x;
     margin: 15px 0;
     width: 100%;
 }
-.orcamento form textarea{
+
+.orcamento form textarea {
     width: 100%;
-    padding:5px;
+    padding: 5px;
     margin-top: 15px;
 }
-.titulo{
+
+.titulo {
     text-align: center;
 }
 
+@keyframes flutuar {
+    0% {
+        transform: translateY(-25px);
+    }
+
+    25% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.img-destaque {
+    animation: flutuar 2s infinite;
+}
